@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Baskervville&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+.card-body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.card-title{
+    font-family: 'Baskervville', serif;
+    font-weight: bolder;
+}
+
+/* font-family: 'Baskervville', serif;
+font-family: 'Montserrat', sans-serif; */

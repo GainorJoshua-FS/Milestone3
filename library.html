@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="An app that makes your tabletop game nights easier and allows you to keep track of your collection">
+    <title>BoardDebut</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/colors.css">
+    <link rel="stylesheet" href="css/size-and-position.css">
+    <script src="js/bootstrap.min.js" defer></script>
+</head>
+<body>
+    <header class="container-fluid ">
+        <h1 class="text-center">Board <img 
+            class="img-fluid"
+            src="images/logo-50.png"
+            alt="Board Debut Logo" /> Debut
+        </h1>
+        <a href="index.html" class="pickbtn btn btn-primary mb-2 mr-2">Home</a>
+        <button type="button" class="btn btn-primary mb-2">Add Game</button>
+    </header>
+<!-- ================================================ -->
+    <main class="container mt-5">
+
+
+        <!-- CUSTOM MODAL. BOOSTRAP MODAL DID NOT WORK -->
+        <!-- <div class="modalTest" id="modalWindow">
+
+            <div class="modal-content">
+                <form id="newtask" action="#urlfordata" method="POST">
+                    <h2>New Task</h2>
+                    <div class="titleWrapper">
+                        <label for="newtask__titleinput">Title</label>
+                        <input type="text" id="newtask__titleinput" name="newtask__titleinput" placeholder="Title" aria-label="Enter a title for new task">
+                    </div>
+                    <div class="descWrapper">
+                        <label for="newtask__descriptioninput">Description</label>
+                        <textarea name="newtask__descriptioninput" id="newtask__descriptioninput" placeholder="Description (minumum of 20 characters.)" cols="20" rows="4" aria-label="Enter a description for new task"></textarea>
+                    </div>
+                    <div class="dateWrapper">
+                        <label for="newtask__dateinput">Due-Date</label>
+                        <input type="date" id="newtask__dateinput" name="newtask__dateinput" aria-label="Enter a due date for new task">
+                    </div>
+                    <div class="buttons">
+                        <button id="newtask__submit">Submit</button>
+                    </div>
+                    <div class="buttons">
+                        <button id="newtask__cancel">Cancel</button>
+                    </div></form>
+                </div>
+
+        </div> -->
+
+
+
+        <div class="row row-cols-auto">
+            <article class="game col-sm-6 col-md-4 col-lg-3 card mr-3 mb-3 ml-3">
+                <img src="images/Catan.jpg" alt="Catan Game Box Art" class="card-img-top">
+                <div class="card-body">
+                    <h2 class="card-title">Catan</h2>
+                    <h3 class="card-subtitle">Time: <span>120</span> Players: <span>4</span></h3>
+                    <p class="card-text">Players try to be the dominant force on the island of Catan by building settlements, cities, and roads. On each turn dice are rolled to determine what resources the island produces.</p>
+                    <button type="button" class="btn btn-secondary">Select Game</button>
+                </div>
+            </article>
+            <article class="game col-xs-8 col-sm-6 col-md-4 col-lg-3 card mr-3 mb-3 ml-3">
+                <img src="images/Ascension.jpg" alt="Ascension Game Box Art" class="card-img-top">
+                <div class="card-body">
+                    <h2 class="card-title">Ascension</h2>
+                    <h3 class="card-subtitle">Time: <span>30</span> Players: <span>4</span></h3>
+                    <p class="card-text">Ascension is a deck-building game in which players spend Runes to acquire more powerful cards for their deck.</p>
+                    <button type="button" class="btn btn-secondary">Select Game</button>
+                </div>
+            </article>
+            <article class="game col-sm-6 col-md-4 col-lg-3 card mr-3 mb-3 ml-3">
+                <img src="images/Dice_City.jpeg" alt="Dice City Game Box Art" class="card-img-top">
+                <div class="card-body">
+                    <h2 class="card-title">Title</h2>
+                    <h3 class="card-subtitle">Time: <span>60    </span> Players: <span>4</span></h3>
+                    <p class="card-text">Dice City is a "dice-crafting" game in which the locations in your city act as the changing faces of your dice each turn. Use tactics and strategy to press your claim!</p>
+                    <button type="button" class="btn btn-secondary">Select Game</button>
+                </div>
+            </article>
+            <article class="game col-sm-6 col-md-4 col-lg-3 card mr-3 mb-3 ml-3">
+                <img src="images/Expoding_Kittens.jpeg" alt="Exploding Kittens Game Box Art" class="card-img-top">
+                <div class="card-body">
+                    <h2 class="card-title">Exploding Kittens</h2>
+                    <h3 class="card-subtitle">Time: <span>15</span> Players: <span>5</span></h3>
+                    <p class="card-text">Exploding Kittens is a kitty-powered version of Russian Roulette. Players take turns drawing cards until someone draws an exploding kitten and loses the game. The deck is made up of cards that let you avoid exploding by peeking at cards before you draw, forcing your opponent to draw multiple cards, or shuffling the deck.</p>
+                    <button type="button" class="btn btn-secondary">Select Game</button>
+                </div>
+            </article>
+        </div>
+    </main>
+<!-- ================================================ -->
+    <footer class="position-fixed w-100 text-center">
+        <ul class="nav">
+            <li><a class="nav-item nav-link" target="_blank" rel="noreferrer noopener" href="#">Instagram</a></li>
+            <li><a class="nav-item nav-link" target="_blank" rel="noreferrer noopener" href="#">IOS</a></li>
+            <li><a class="nav-item nav-link" target="_blank" rel="noreferrer noopener" href="#">Android</a></li>
+        </ul>
+    </footer>
+</body>
+</html>

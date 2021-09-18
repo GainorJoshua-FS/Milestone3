@@ -1,0 +1,95 @@
+body{
+    background: #F2E5B2;
+}
+
+header, footer, form{
+    background: #633817;
+    color: #F2E5B2;
+}
+
+main{
+    color: #633817;
+}
+
+.btn-primary{
+    background-color: #F2E5B2;
+    color: #633817;
+    border: none;
+}
+.btn-primary:hover{
+    background-color:#F2E5B2;
+    box-shadow: 3px 3px #d8c77f;
+    color: #633817;
+}
+
+.btn-primary:focus, .btn-primary.focus {
+    color: #633817;
+    background-color: #F2E5B2;
+    border: none;
+    box-shadow: 0 0 0 0.2rem #d8c77f;
+}
+
+.btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active,
+.show > .btn-primary.dropdown-toggle {
+    color: #633817;
+    background-color: #F2E5B2;
+    border: none;
+    box-shadow: 0 0 0 0.2rem #d8c77f;
+}
+
+.btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus,
+.show > .btn-primary.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem #944e18;
+}
+
+.btn-secondary{
+    background-color: #FFD800;
+    color: #633817;
+    border: none;
+}
+.btn-secondary:hover{
+    background-color:#FFD800;
+    box-shadow: 3px 3px #bfa40d;
+    color: #633817;
+}
+
+.game{
+    background-color: #633817;
+    color: #F2E5B2;
+}
+
+.card-title{
+    color: #EB7A24;
+}
+
+.card-subtitle span{
+    color: #90C967;
+}
+
+.generateForm input{
+    background-color: #9A5D2F;
+    color: #F2E5B2;
+}
+
+.nav-item{
+    color: #5E72BC;
+}
+.nav-item:hover{
+    color: #EB7A24;
+}
+
+/* 
+    Primary:
+    #633817
+    #F2E5B2
+    #9A5D2F
+
+    Secondary:
+    #90C967
+    #5E72BC
+    #EB7A24
+
+    Tertiary:
+    #A9EF77
+    #FFD800
+*/
