@@ -30,9 +30,11 @@ body, main{
 .carouselgame{
     background-color: #633817;
     color: #F2E5B2;
+    max-height: 343px;
+    overflow: scroll;
 }
 
-.modalTest {
+.modalGame{
     display: none;
     position: fixed;
     z-index: 1;
@@ -45,7 +47,7 @@ body, main{
     background: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 .modal-content{
-    background: rgb(95, 102, 96);
+    background: #944e18;
     margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
@@ -58,4 +60,18 @@ body, main{
 
 .carousel{
     max-height: 360px;
+}
+
+@media screen and (max-width: 992px){
+    footer{
+        display: none;
+    }
+}
+
+.titleLabel{
+    width: 100%;
+}
+
+.hide{
+    display: none;
 }
