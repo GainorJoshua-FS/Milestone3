@@ -22,6 +22,7 @@ class BoadDebut{
 
 class Main{
     constructor(){
+
         let pickGame = document.querySelector('.pickbtn').addEventListener('click', e => this.RandomGameForm(e));
     }
     
