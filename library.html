@@ -10,7 +10,9 @@
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/colors.css">
     <link rel="stylesheet" href="css/size-and-position.css">
+    <script src="https://registry.npmjs.org/jquery/-/jquery-3.6.0.tgz" integrity="sha512-JVzAR/AjBvVt2BmYhxRCSYysDsPcssdmTFnzyLEts9qNwmjmu4JTAMYubEfwVOSwpQ1I1sKKFcxhZCI2buerfw==" defer></script>
     <script src="js/bootstrap.min.js" defer></script>
+    <script src="js/library.js" defer></script>
 </head>
 <body>
     <header class="container-fluid ">
@@ -20,41 +22,32 @@
             alt="Board Debut Logo" /> Debut
         </h1>
         <a href="index.html" class="pickbtn btn btn-primary mb-2 mr-2">Home</a>
-        <button type="button" class="btn btn-primary mb-2">Add Game</button>
+        <button type="button" class="btn addBtn btn-primary mb-2">Add Game</button>
     </header>
 <!-- ================================================ -->
     <main class="container mt-5">
 
 
         <!-- CUSTOM MODAL. BOOSTRAP MODAL DID NOT WORK -->
-        <!-- <div class="modalTest" id="modalWindow">
-
+        <!-- <div class="modalGame" id="modalWindow">
             <div class="modal-content">
-                <form id="newtask" action="#urlfordata" method="POST">
-                    <h2>New Task</h2>
-                    <div class="titleWrapper">
-                        <label for="newtask__titleinput">Title</label>
-                        <input type="text" id="newtask__titleinput" name="newtask__titleinput" placeholder="Title" aria-label="Enter a title for new task">
-                    </div>
-                    <div class="descWrapper">
-                        <label for="newtask__descriptioninput">Description</label>
-                        <textarea name="newtask__descriptioninput" id="newtask__descriptioninput" placeholder="Description (minumum of 20 characters.)" cols="20" rows="4" aria-label="Enter a description for new task"></textarea>
-                    </div>
-                    <div class="dateWrapper">
-                        <label for="newtask__dateinput">Due-Date</label>
-                        <input type="date" id="newtask__dateinput" name="newtask__dateinput" aria-label="Enter a due date for new task">
-                    </div>
-                    <div class="buttons">
-                        <button id="newtask__submit">Submit</button>
-                    </div>
-                    <div class="buttons">
-                        <button id="newtask__cancel">Cancel</button>
-                    </div></form>
-                </div>
-
+                <form class="container col-sm-10 col-md-8 col-lg-5 generateForm" id="newgame" method="POST">
+                    <h6 class="text-right">*required</h6>
+                    <label for="img" class="form-label">Select image:</label>
+                    <input type="file" class="mb-3 modalImg" id="img" name="img" accept="image/*">
+                    <label for="titleInput" class="form-label">*Title</label>
+                    <input type="text" class="form-control mb-3 modalTitle" id="titleInput">
+                    <label for="playersInput" class="form-label">*Max Amount of Players</label>
+                    <input type="number" class="form-control mb-3 modalPlayers" id="playersInput">
+                    <label for="timeInput" class="form-label">*Time Needed(in minutes)</label>
+                    <input type="number" class="form-control mb-3 modalTime" placeholder="(ex: 120)" id="timeInput">
+                    <label for="descInput" class="form-label">Description</label>
+                    <textarea class="form-control mb-3 modalDesc" id="descInput"></textarea>
+                    <button type="button" class="btn submitBtn btn-primary mb-3 mr-3">Submit</button>
+                    <button type="button" class="btn cancelBtn btn-primary mb-3">Cancel</button>
+                </form>
+            </div>
         </div> -->
-
-
 
         <div class="row row-cols-auto">
             <article class="game col-sm-6 col-md-4 col-lg-3 card mr-3 mb-3 ml-3">
@@ -96,12 +89,12 @@
         </div>
     </main>
 <!-- ================================================ -->
-    <footer class="position-fixed w-100 text-center">
-        <ul class="nav">
-            <li><a class="nav-item nav-link" target="_blank" rel="noreferrer noopener" href="#">Instagram</a></li>
-            <li><a class="nav-item nav-link" target="_blank" rel="noreferrer noopener" href="#">IOS</a></li>
-            <li><a class="nav-item nav-link" target="_blank" rel="noreferrer noopener" href="#">Android</a></li>
-        </ul>
-    </footer>
+<footer class="position-fixed w-100 text-center col-sm-auto">
+    <ul class="nav">
+        <li><a class="nav-item nav-link" target="_blank" rel="noreferrer noopener" href="#">Instagram</a></li>
+        <li><a class="nav-item nav-link" target="_blank" rel="noreferrer noopener" href="#">IOS</a></li>
+        <li><a class="nav-item nav-link" target="_blank" rel="noreferrer noopener" href="#">Android</a></li>
+    </ul>
+</footer>
 </body>
 </html>

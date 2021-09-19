@@ -10,8 +10,9 @@
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/colors.css">
     <link rel="stylesheet" href="css/size-and-position.css">
+    <script src="https://registry.npmjs.org/jquery/-/jquery-3.6.0.tgz" integrity="sha512-JVzAR/AjBvVt2BmYhxRCSYysDsPcssdmTFnzyLEts9qNwmjmu4JTAMYubEfwVOSwpQ1I1sKKFcxhZCI2buerfw==" defer></script>
     <script src="js/bootstrap.min.js" defer></script>
-    <script src = "js/index.js" defer></script>
+    <script src = "js/main.js" defer></script>
 </head>
 <body>
     <header class="container-fluid ">
@@ -39,11 +40,11 @@
             <input type="number" class="form-control mb-3" placeholder="(ex: 120)" id="timeInput">
             <label for="descInput" class="form-label">Description</label>
             <textarea class="form-control mb-3" id="descInput"></textarea>
-            <button type="button" class="btn submitBtn btn-primary mb-3">Submit</button>
+            <button type="button" class="btn submitBtn btn-primary mb-3 mr-3">Submit</button>
             <button type="button" class="btn cancelBtn btn-primary mb-3">Cancel</button>
         </form> -->
 
-        <section id="carouselExampleIndicators" class="carousel slide container col-sm-10 col-md-12 col-lg-6" data-bs-ride="carousel">
+        <section id="carouselExampleIndicators" class="carousel slide container col-sm-10 col-md-8 col-lg-9" data-bs-ride="carousel">
             <nav class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -52,11 +53,11 @@
             </nav>
             <div class="carousel-inner text-center">
                 <article class="carouselgame carousel-item active">
-                    <img src="images/Ascension.jpg" alt="Ascension Game Box Art" class="card-img-top">
+                    <img src="images/Ascension.jpg" alt="Ascension Game Box Art" class="card-img-top col-sm-10 col-md-10 col-lg-9">
                     <div class="card-body">
                         <h2 class="card-title">Ascension</h2>
                         <h3 class="card-subtitle">Time: <span>30</span> Players: <span>4</span></h3>
-                        <p class="card-text">Ascension is a deck-building game in which players spend Runes to acquire more powerful cards for their deck.</p>
+                        <p class="card-tex">Ascension is a deck-building game in which players spend Runes to acquire more powerful cards for their deck.</p>
                     </div>
                 </article>
 
@@ -91,19 +92,21 @@
                 </article>
             </div>
 
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
+            <div class="sideArrows">
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
         </section>
     </main>
 <!-- ================================================ -->
-    <footer class="position-fixed w-100 text-center">
+    <footer class="position-fixed w-100 text-center col-sm-auto">
         <ul class="nav">
             <li><a class="nav-item nav-link" target="_blank" rel="noreferrer noopener" href="#">Instagram</a></li>
             <li><a class="nav-item nav-link" target="_blank" rel="noreferrer noopener" href="#">IOS</a></li>

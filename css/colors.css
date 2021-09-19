@@ -22,6 +22,12 @@ main{
     color: #633817;
 }
 
+.btn-primary.disabled, .btn-primary:disabled {
+    color: #fff;
+    background-color: #766f54;
+    border: none;
+}
+
 .btn-primary:focus, .btn-primary.focus {
     color: #633817;
     background-color: #F2E5B2;
@@ -39,7 +45,7 @@ main{
 
 .btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus,
 .show > .btn-primary.dropdown-toggle:focus {
-  box-shadow: 0 0 0 0.2rem #944e18;
+    box-shadow: 0 0 0 0.2rem #944e18;
 }
 
 .btn-secondary{
@@ -66,10 +72,10 @@ main{
     color: #90C967;
 }
 
-.generateForm input{
+/* .generateForm input, textarea{
     background-color: #9A5D2F;
     color: #F2E5B2;
-}
+} */
 
 .nav-item{
     color: #5E72BC;
@@ -77,6 +83,23 @@ main{
 .nav-item:hover{
     color: #EB7A24;
 }
+
+.error{
+    border: 3px solid red;
+}
+
+.textError{
+    color: red;
+}
+
+.form-control:focus {
+    color: #633817;
+    background-color: #fff;
+    border-color: #633817;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem #944e18;
+}
+
 
 /* 
     Primary:
