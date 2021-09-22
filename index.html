@@ -6,13 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="An app that makes your tabletop game nights easier and allows you to keep track of your collection">
     <title>BoardDebut</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/colors.css">
     <link rel="stylesheet" href="css/size-and-position.css">
-    <script src="https://registry.npmjs.org/jquery/-/jquery-3.6.0.tgz" integrity="sha512-JVzAR/AjBvVt2BmYhxRCSYysDsPcssdmTFnzyLEts9qNwmjmu4JTAMYubEfwVOSwpQ1I1sKKFcxhZCI2buerfw==" defer></script>
     <script src="js/bootstrap.min.js" defer></script>
     <script src = "js/main.js" defer></script>
+    <script src = "js/Games.js" defer></script>
 </head>
 <body>
     <header class="container-fluid ">
@@ -25,7 +26,7 @@
         <a href="library.html" class="btn btn-primary mb-2">My Library</a>
     </header>
 <!-- ================================================ -->
-    <main class="container pt-4 row">
+    <main class="container p-4 row col-lg-6">
 
         <!-- FORM EXAMPLE -->
         <!-- <form class="container col-sm-4 col-md-2 col-lg-4 generateForm">
@@ -44,7 +45,54 @@
             <button type="button" class="btn cancelBtn btn-primary mb-3">Cancel</button>
         </form> -->
 
-        <section id="carousel" class="carousel slide container col-sm-10 col-md-8 col-lg-9" data-bs-ride="carousel">
+
+        <section id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <article class="carousel-item active carouselgame text-center">
+                    <img class="d-block w-100 card-img-top" src="images/Ascension.jpg" alt="Ascension Game Box Art">
+                    <div class="card-body">
+                        <h2 class="card-title">Ascension</h2>
+                        <h3 class="card-subtitle">Time: <span>30</span> Players: <span>4</span></h3>
+                        <p class="card-tex">Ascension is a deck-building game in which players spend Runes to acquire more powerful cards for their deck.</p>
+                    </div>
+                </article>
+                <article class="carousel-item carouselgame text-center">
+                    <img class="d-block w-100 card-img-top" src="images/Catan.jpg" alt="Catan Game Box Art">
+                    <div class="card-body">
+                        <h2 class="card-title">Catan</h2>
+                        <h3 class="card-subtitle">Time: <span>120</span> Players: <span>4</span></h3>
+                        <p class="card-tex">Players try to be the dominant force on the island of Catan by building settlements, cities, and roads. On each turn dice are rolled to determine what resources the island produces.</p>
+                    </div>
+                </article>
+                <article class="carousel-item carouselgame text-center">
+                    <img class="d-block w-100 card-img-top" src="images/Dice_City.jpg" alt="Dice City Game Box Art">
+                    <div class="card-body">
+                        <h2 class="card-title">Dice City</h2>
+                        <h3 class="card-subtitle">Time: <span>60</span> Players: <span>4</span></h3>
+                        <p class="card-tex">Dice City is a "dice-crafting" game in which the locations in your city act as the changing faces of your dice each turn. Use tactics and strategy to press your claim!</p>
+                    </div>
+                </article>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon sideArrows" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon sideArrows" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </section>
+
+
+
+
+        <!-- FAILED CAROUSEL -->
+        <!-- <section id="carousel" class="carousel slide container col-sm-10 col-md-8 col-lg-9" data-bs-ride="carousel">
             <nav class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -70,26 +118,6 @@
                         <button type="button" class="btn btn-secondary">Select Game</button>
                     </div>
                 </article>
-                
-                <article class="carouselgame carousel-item">
-                    <img src="images/Dice_City.jpeg" alt="Dice City Game Box Art" class="card-img-top">
-                    <div class="card-body">
-                        <h2 class="card-title">Title</h2>
-                        <h3 class="card-subtitle">Time: <span>60    </span> Players: <span>4</span></h3>
-                        <p class="card-text">Dice City is a "dice-crafting" game in which the locations in your city act as the changing faces of your dice each turn. Use tactics and strategy to press your claim!</p>
-                        <button type="button" class="btn btn-secondary">Select Game</button>
-                    </div>
-                </article>
-
-                <article class="carouselgame carousel-item">
-                    <img src="images/Expoding_Kittens.jpeg" alt="Exploding Kittens Game Box Art" class="card-img-top">
-                    <div class="card-body">
-                        <h2 class="card-title">Exploding Kittens</h2>
-                        <h3 class="card-subtitle">Time: <span>15</span> Players: <span>5</span></h3>
-                        <p class="card-text">Exploding Kittens is a kitty-powered version of Russian Roulette. Players take turns drawing cards until someone draws an exploding kitten and loses the game. The deck is made up of cards that let you avoid exploding by peeking at cards before you draw, forcing your opponent to draw multiple cards, or shuffling the deck.</p>
-                        <button type="button" class="btn btn-secondary">Select Game</button>
-                    </div>
-                </article>
             </div>
 
             <div class="sideArrows">
@@ -103,7 +131,7 @@
                     <span class="visually-hidden">Next</span>
                 </button>
             </div>
-        </section>
+        </section> -->
     </main>
 <!-- ================================================ -->
     <footer class="position-fixed w-100 text-center col-sm-auto">

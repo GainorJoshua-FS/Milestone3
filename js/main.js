@@ -22,7 +22,6 @@ class BoadDebut{
 
 class Main{
     constructor(){
-
         let pickGame = document.querySelector('.pickbtn').addEventListener('click', e => this.RandomGameForm(e));
     }
     
@@ -31,9 +30,7 @@ class Main{
         
         const main = document.querySelector('main'),
         carousel = document.querySelector('.carousel'),
-        pickGame = document.querySelector('.pickbtn'),
-        carouselIndicators = document.querySelector('.carousel-indicators'),
-        carouselArrows = document.querySelector('.sideArrows');
+        pickGame = document.querySelector('.pickbtn');
 
         //disable button so multiple forms cant be added
         pickGame.disabled = true;
@@ -42,14 +39,10 @@ class Main{
         let modal = document.createElement('div');
         modal.className = 'modalGame';
         modal.setAttribute('id', 'modalWindow');
-        modal.innerHTML = '<div class="modal-content"><form class="container col-sm-10 col-md-8 col-lg-6 generateForm" id="newgame" method="POST"><div class="playerWrapper"><label for="playersInput" class="form-label">Number of Players</label><input type="number" class="form-control mb-3 modalPlayers" id="playersInput"></div><div class="timeWrapper"><label for="timeInput" class="form-label">Time Needed(in minutes)</label><input type="number" class="form-control mb-3 modalTime" placeholder="(ex: 120 = 120 minutes)" id="timeInput"></div><button type="button" class="btn submitBtn btn-primary mb-3 mr-3">Submit</button><button type="button" class="btn cancelBtn btn-primary mb-3">Cancel</button></form></div>';
+        modal.innerHTML = '<div class="modalContent"><form class="container col-sm-10 col-md-8 col-lg-6 generateForm" id="newgame" method="POST"><div class="playerWrapper"><label for="playersInput" class="form-label">Number of Players</label><input type="number" class="form-control mb-3 modalPlayers" id="playersInput"></div><div class="timeWrapper"><label for="timeInput" class="form-label">Time Needed(in minutes)</label><input type="number" class="form-control mb-3 modalTime" placeholder="(ex: 120 = 120 minutes)" id="timeInput"></div><button type="button" class="btn submitBtn btn-primary mb-3 mr-3">Submit</button><button type="button" class="btn cancelBtn btn-primary mb-3">Cancel</button></form></div>';
 
         //Display Form
         main.prepend(modal);
-
-        //hide other position absolutes
-        carouselIndicators.classList.add('hide');
-        carouselArrows.classList.add('hide');
 
         //Get Buttons
         const submit = document.querySelector('.submitBtn'),
@@ -61,8 +54,6 @@ class Main{
         cancel.addEventListener('click', e => {
             e.preventDefault();
             modal.remove();
-            carouselIndicators.classList.remove('hide');
-            carouselArrows.classList.remove('hide');
             pickGame.disabled = false;
         })
     }

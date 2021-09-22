@@ -1,6 +1,7 @@
 .card-subtitle{
     font-size: 20px;
     border-bottom: 1px solid #5E72BC;
+
 }
 
 footer{
@@ -21,6 +22,8 @@ footer{
 .card{
     padding: 0;
     max-width: 350px;
+    background-color: #633817;
+    color: #F2E5B2;
 }
 
 body, main{
@@ -37,7 +40,7 @@ body, main{
 .modalGame{
     display: none;
     position: fixed;
-    z-index: 1;
+    z-index: 16;
     left: 0;
     top: 0;
     width: 100%;
@@ -46,9 +49,9 @@ body, main{
     background: rgb(0,0,0); /* Fallback color */
     background: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
-.modal-content{
+.modalContent{
     background: #944e18;
-    margin: 15% auto;
+    margin: 15% auto; /* 8rem auto 0 auto*/
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
@@ -59,14 +62,14 @@ body, main{
 }
 
 .carousel{
-    max-height: 360px;
+    width: 100%;
 }
 
-@media screen and (max-width: 992px){
-    footer{
-        display: none;
-    }
+.row{
+    margin-left: auto;
+    margin-right: auto;
 }
+
 
 .titleLabel{
     width: 100%;
@@ -74,4 +77,27 @@ body, main{
 
 .hide{
     display: none;
+}
+
+.selectBtn{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: transparent;
+}
+
+.game{
+    transition: transform 0.25s;
+}
+
+.game:hover{
+    
+    transform: scale(1.05);
+}
+
+.card-img-top{
+    object-fit: cover;
+    object-position: top center;
 }

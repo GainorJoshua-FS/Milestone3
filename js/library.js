@@ -23,6 +23,7 @@ class Library{
 class MyLibrary{
     constructor(){
         let addGame = document.querySelector('.addBtn').addEventListener('click', e => this.AddModal(e));
+        console.log(gamesArray[0].title);
     }
 
     AddModal(e){
@@ -33,7 +34,7 @@ class MyLibrary{
         let modal = document.createElement('div');
         modal.className = 'modalGame';
         modal.setAttribute('id', 'modalWindow');
-        modal.innerHTML = '<div class="modal-content"><form class="container col-sm-10 col-md-8 col-lg-6 generateForm" id="newgame" method="POST"><h6 class="text-right">*required</h6><label for="img" class="form-label">Select image:</label><input type="file" class="mb-3 modalImg" id="img" name="img"><div class="titleWrapper"><label for="titleInput" class="form-label titleLabel">*Title</label><input type="text" class="form-control mb-3 modalTitle" id="titleInput"></div><div class="playerWrapper"><label for="playersInput" class="form-label">*Max Amount of Players</label><input type="number" class="form-control mb-3 modalPlayers" id="playersInput"></div><div class="timeWrapper"><label for="timeInput" class="form-label">*Time Needed(in minutes)</label><input type="number" class="form-control mb-3 modalTime" placeholder="(ex: 120)" id="timeInput"></div><label for="descInput" class="form-label">Description</label><textarea class="form-control mb-3 modalDesc" id="descInput"></textarea><button type="button" class="btn submitBtn btn-primary mb-3 mr-3">Submit</button><button type="button" class="btn cancelBtn btn-primary mb-3">Cancel</button></form></div>';
+        modal.innerHTML = '<div class="modalContent"><form class="container col-sm-10 col-md-8 col-lg-6 generateForm" id="newgame" method="POST"><h6 class="text-right">*required</h6><label for="img" class="form-label">Select image:</label><input type="file" class="mb-3 modalImg" id="img" name="img"><div class="titleWrapper"><label for="titleInput" class="form-label titleLabel">*Title</label><input type="text" class="form-control mb-3 modalTitle" id="titleInput"></div><div class="playerWrapper"><label for="playersInput" class="form-label">*Max Amount of Players</label><input type="number" class="form-control mb-3 modalPlayers" id="playersInput"></div><div class="timeWrapper"><label for="timeInput" class="form-label">*Time Needed(in minutes)</label><input type="number" class="form-control mb-3 modalTime" placeholder="(ex: 120)" id="timeInput"></div><label for="descInput" class="form-label">Description</label><textarea class="form-control mb-3 modalDesc" id="descInput"></textarea><button type="button" class="btn submitBtn btn-primary mb-3 mr-3">Submit</button><button type="button" class="btn cancelBtn btn-primary mb-3">Cancel</button></form></div>';
 
         //display modal
         main.prepend(modal);
