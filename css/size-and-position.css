@@ -12,7 +12,6 @@ footer{
 
 .card-text{
     max-height: 150px;
-    overflow: scroll;
 }
 
 .card-img-top{
@@ -93,7 +92,6 @@ body, main{
 }
 
 .game:hover{
-    
     transform: scale(1.05);
 }
 

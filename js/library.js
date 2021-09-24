@@ -1,5 +1,5 @@
 window.addEventListener("load", function(){
-    console.log("page loaded");
+    console.log("library page loaded");
     //instantiate singleton
     let library = Library.getInstance();
 });
@@ -22,8 +22,10 @@ class Library{
 
 class MyLibrary{
     constructor(){
+        this.LoadInGames();
         let addGame = document.querySelector('.addBtn').addEventListener('click', e => this.AddModal(e));
-        console.log(gamesArray[0].title);
+        document.querySelector('.selectBtn').addEventListener('click', e => this.GameModal(e));
+        // console.log(gamesArray[0].title);
     }
 
     AddModal(e){
@@ -141,5 +143,58 @@ class MyLibrary{
             timeWrapper.appendChild(timeError);
             inputs[3].classList.add('error');
         }
+    }
+
+    gameModal(e){
+        e.preventDefault();
+    }
+
+    LoadInGames(){
+        let container = document.querySelector('.row');
+
+        //IF GAMES DONT EXIST WITHIN HTML
+        if(document.querySelector('.game') === null){
+            for(let i=0; i < gamesArray.length; i++){
+                let newGame = document.createElement('article');
+                newGame.classList.add('game', 'col-sm-12', 'col-md-6', 'col-lg-4', 'card', 'container', 'gx-3', 'mt-3');
+                newGame.innerHTML = `<img src="images/${gamesArray[i].title}.jpg" alt="${gamesArray[i].title} Game Box Art" class="card-img-top">
+                <div class="card-body">
+                    <h2 class="card-title">${gamesArray[i].title}</h2>
+                        <dl class= "card-subtitle mb-1 pb-1"> 
+                            <dt class="float-left">Time: </dt>
+                            <dd>${gamesArray[i].time}</dd>
+                            <dt class="float-left">Players:</dt>
+                            <dd>${gamesArray[i].players}</dd>
+                        </dl>
+                    <p class="card-text overflow-hidden">${gamesArray[i].desc}</p>
+                    <button type="button" class="selectBtn"></button>
+                </div>`;
+                container.appendChild(newGame);
+            }
+        }
+        //IF GAMES ALREADY EXIST INSIDE HTML
+        // else{
+        //     let games = document.querySelectorAll('.game');
+        //     for(let i=0; i < games.length; i++){
+        //         games[i].remove();
+        //     }
+        //     for(let i=0; i < gamesArray.length; i++){
+        //         let newGame = document.createElement('article');
+        //         newGame.classList.add('game', 'col-sm-12', 'col-md-4', 'col-lg-3', 'card', 'container', 'gx-3', 'mt-3');
+        //         newGame.innerHTML = `<img src="images/${gamesArray[i].title}.jpg" alt="${gamesArray[i].title} Game Box Art" class="card-img-top">
+        //         <div class="card-body">
+        //             <h2 class="card-title">${gamesArray[i].title}</h2>
+        //                 <dl class= "card-subtitle mb-1 pb-1"> 
+        //                     <dt class="float-left">Time: </dt>
+        //                     <dd>${gamesArray[i].time}</dd>
+        //                     <dt class="float-left">Players:</dt>
+        //                     <dd>${gamesArray[i].players}</dd>
+        //                 </dl>
+        //             <p class="card-text overflow-hidden">${gamesArray[i].desc}</p>
+        //             <button type="button" class="selectBtn"></button>
+        //         </div>`;
+        //         container.appendChild(newGame);
+        //     }
+        // }
     }
 }
