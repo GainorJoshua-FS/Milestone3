@@ -1,7 +1,6 @@
 .card-subtitle{
     font-size: 20px;
     border-bottom: 1px solid #5E72BC;
-
 }
 
 footer{
@@ -29,11 +28,12 @@ body, main{
     margin-bottom: 50px;
 }
 
-.carouselgame{
+.carouselgame, .carouselFiller{
     background-color: #633817;
     color: #F2E5B2;
     max-height: 343px;
     overflow: scroll;
+    height: 343px;
 }
 
 .modalGame{
@@ -53,7 +53,8 @@ body, main{
     margin: 15% auto; /* 8rem auto 0 auto*/
     padding: 20px;
     border: 1px solid #888;
-    width: 80%;
+    width: 100%;
+    min-width: 400px;
 }
 
 #modalWindow{
@@ -98,4 +99,23 @@ body, main{
 .card-img-top{
     object-fit: cover;
     object-position: top center;
+}
+
+.new-img-fluid{
+    width: 50%;
+    height: 50%;
+}
+
+.new-img-fluid::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.modalContent .card-subtitle{
+    border-bottom: none;
+}
+
+.modalContent .card-text{
+    border-top: 1px solid #5E72BC;
 }

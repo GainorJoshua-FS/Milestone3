@@ -68,6 +68,10 @@ main{
     color: #90C967;
 }
 
+.card-text, dt{
+    color: #F2E5B2;
+}
+
 .nav-item{
     color: #5E72BC;
 }

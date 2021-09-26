@@ -49,11 +49,18 @@
         <section id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
                 <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1" class="indicator"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2" class="indicator"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="3" class="indicator"></li>
             </ol>
             <div class="carousel-inner">
-                <article class="carousel-item active carouselgame text-center">
+                <article class="carousel-item active carouselFiller text-center">
+                    <div class="card-body">
+                        <h2 class="card-title">My Games</h2>
+                        <p class="card-tex">This Carousel will show your games that you own and act as your random game picker for game night.</p>
+                    </div>
+                </article>
+                <article class="carousel-item  carouselgame text-center">
                     <img class="d-block w-100 card-img-top" src="images/Ascension.jpg" alt="Ascension Game Box Art">
                     <div class="card-body">
                         <h2 class="card-title">Ascension</h2>
@@ -87,51 +94,6 @@
                 <span class="sr-only">Next</span>
             </a>
         </section>
-
-
-
-
-        <!-- FAILED CAROUSEL -->
-        <!-- <section id="carousel" class="carousel slide container col-sm-10 col-md-8 col-lg-9" data-bs-ride="carousel">
-            <nav class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            </nav>
-            <div class="carousel-inner text-center">
-                <article class="carouselgame carousel-item active">
-                    <img src="images/Ascension.jpg" alt="Ascension Game Box Art" class="card-img-top col-sm-10 col-md-10 col-lg-9">
-                    <div class="card-body">
-                        <h2 class="card-title">Ascension</h2>
-                        <h3 class="card-subtitle">Time: <span>30</span> Players: <span>4</span></h3>
-                        <p class="card-tex">Ascension is a deck-building game in which players spend Runes to acquire more powerful cards for their deck.</p>
-                    </div>
-                </article>
-
-                <article class="carouselgame carousel-item">
-                    <img src="images/Catan.jpg" alt="Catan Game Box Art" class="card-img-top">
-                    <div class="card-body">
-                        <h2 class="card-title">Catan</h2>
-                        <h3 class="card-subtitle">Time: <span>120</span> Players: <span>4</span></h3>
-                        <p class="card-text">Players try to be the dominant force on the island of Catan by building settlements, cities, and roads. On each turn dice are rolled to determine what resources the island produces.</p>
-                        <button type="button" class="btn btn-secondary">Select Game</button>
-                    </div>
-                </article>
-            </div>
-
-            <div class="sideArrows">
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
-            </div>
-        </section> -->
     </main>
 <!-- ================================================ -->
     <footer class="position-fixed w-100 text-center col-sm-auto">

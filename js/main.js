@@ -22,6 +22,7 @@ class BoadDebut{
 
 class Main{
     constructor(){
+        this.FillCarousel()
         let pickGame = document.querySelector('.pickbtn').addEventListener('click', e => this.RandomGameForm(e));
     }
     
@@ -51,6 +52,7 @@ class Main{
         //Button Options
         submit.addEventListener('click', e => this.SubmitGame(e));
 
+        //Cancel Button
         cancel.addEventListener('click', e => {
             e.preventDefault();
             modal.remove();
@@ -58,22 +60,104 @@ class Main{
         })
     }
 
+// ====Display Chosen Random Game================================================
     SubmitGame(e){
         e.preventDefault();
 
         let players = document.querySelector('.modalPlayers').value,
         time = document.querySelector('.modalTime').value,
         playerWrap = document.querySelector('.playerWrapper'),
-        timeWrap = document.querySelector('.timeWrapper');
+        timeWrap = document.querySelector('.timeWrapper'),
+        modal = document.querySelector('.modalGame');
 
         if(players === '' || time === ''){
             this.ValidateInputs(players, time, playerWrap, timeWrap)
         }
         else{
-            //ADD GAME
+            //GET GAME
+            modal.remove();
         }
     }
 
+// ====Fill Carousel with Games================================================
+    FillCarousel(){
+        const carousel = document.querySelector('.carousel-inner'),
+        indicatorList = document.querySelector('.carousel-indicators');
+
+        //IF GAMES ARE NOT IN CAROUSEL
+        if(document.querySelector('.carouselgame') === null){
+            for(let i=0; i < gamesArray.length; i++){
+                //Create elements
+                let carouselGame = document.createElement('article'),
+                indicator = document.createElement('li');
+
+                //Add attributes to elements
+                carouselGame.classList.add('carousel-item','carouselgame', 'text-center');
+
+                indicator.setAttribute('data-target', '#carouselExampleIndicators');
+                indicator.setAttribute('data-slide-to', i+1)
+
+                //Add Inner Html
+                carouselGame.innerHTML = `
+                <div class="card-body">
+                    <h2 class="card-title">${gamesArray[i].title}</h2>
+                    <dl class= "card-subtitle mb-1 pb-1">
+                        <dt>Time: </dt>
+                        <dd>${gamesArray[i].time}</dd>
+                        <dt>Players:</dt>
+                        <dd>${gamesArray[i].players}</dd>
+                    </dl>
+                    <p class="card-tex">${gamesArray[i].desc}</p>
+                </div>`;
+
+                //Append to HTML
+                indicatorList.appendChild(indicator);
+                carousel.appendChild(carouselGame);
+            }
+        }
+        //IF GAMES ARE ALREADY IN CAROUSEL
+        else{
+            //Clear all games so no duplicates
+            let games = document.querySelectorAll('.carouselgame'),
+            allIndicators = document.querySelectorAll('.indicator');
+            for(let i=0; i < games.length; i++){
+                games[i].remove();
+                allIndicators[i].remove();
+            }
+            //Add games back in
+            for(let i=0; i < gamesArray.length; i++){
+
+                //Create elements
+                let carouselGame = document.createElement('article'),indicator = document.createElement('li');
+
+                //Add Atributes
+                carouselGame.classList.add('carousel-item','carouselgame', 'text-center');
+
+                indicator.setAttribute('data-target', '#carouselExampleIndicators');
+                indicator.setAttribute('data-slide-to', i+1)
+
+                //Add inner HTML
+                carouselGame.innerHTML = `
+                <div class="card-body">
+                    <h2 class="card-title">${gamesArray[i].title}</h2>
+                    <dl class= "card-subtitle mb-1 pb-1">
+                        <dt>Time: </dt>
+                        <dd>${gamesArray[i].time}</dd>
+                        <dt>Players:</dt>
+                        <dd>${gamesArray[i].players}</dd>
+                    </dl>
+                    <p class="card-tex">${gamesArray[i].desc}</p>
+                </div>`;
+
+                //Append to HTML
+                indicatorList.appendChild(indicator);
+                carousel.appendChild(carouselGame);
+            }
+        }
+
+    }
+
+// ====Validate Filter================================================
     ValidateInputs(players, time, playerWrapper, timeWrapper){
         //create labels and add attributes as needed
         let playerError = document.createElement('label'),
