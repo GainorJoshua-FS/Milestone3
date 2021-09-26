@@ -65,8 +65,7 @@ class MyLibrary{
         const page = document.querySelector('.row-cols-auto'),
         modal = document.querySelector('.modalGame');
 
-        let image = document.querySelector('.modalImg').value,
-        title = document.querySelector('.modalTitle').value,
+        let title = document.querySelector('.modalTitle').value,
         players = document.querySelector('.modalPlayers').value,
         time = document.querySelector('.modalTime').value,
         desc = document.querySelector('.modalDesc').value,

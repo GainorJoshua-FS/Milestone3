@@ -22,19 +22,19 @@ class BoadDebut{
 
 class Main{
     constructor(){
-        this.FillCarousel()
+        this.FillCarousel();
         let pickGame = document.querySelector('.pickbtn').addEventListener('click', e => this.RandomGameForm(e));
     }
     
     RandomGameForm(e){
         e.preventDefault();
+
+        //Re-add all games for the filter
+        // this.FillCarousel();
         
         const main = document.querySelector('main'),
         carousel = document.querySelector('.carousel'),
         pickGame = document.querySelector('.pickbtn');
-
-        //disable button so multiple forms cant be added
-        pickGame.disabled = true;
 
         //Create Form Form
         let modal = document.createElement('div');
@@ -56,7 +56,6 @@ class Main{
         cancel.addEventListener('click', e => {
             e.preventDefault();
             modal.remove();
-            pickGame.disabled = false;
         })
     }
 
@@ -69,6 +68,7 @@ class Main{
         playerWrap = document.querySelector('.playerWrapper'),
         timeWrap = document.querySelector('.timeWrapper'),
         modal = document.querySelector('.modalGame');
+        // games = document.querySelectorAll('.carouselgame');
 
         if(players === '' || time === ''){
             this.ValidateInputs(players, time, playerWrap, timeWrap)
@@ -76,6 +76,24 @@ class Main{
         else{
             //GET GAME
             modal.remove();
+
+            // for(let i=0; i < gamesArray.length; i++){
+            //     console.log(i);
+            //     console.log(games[i]);
+            //     if(gamesArray[i].time > time || gamesArray[i].players > players){
+            //         gamesArray.splice(i, 1);
+            //         games[i].remove;
+            //     }
+            // }
+
+            // this.FillCarousel();
+
+            // $('.carousel').carousel({
+            //     interval: 100,
+            //     keyboard: false,
+            //     pause: false,
+            //     wrap: true,
+            // })
         }
     }
 
@@ -88,14 +106,10 @@ class Main{
         if(document.querySelector('.carouselgame') === null){
             for(let i=0; i < gamesArray.length; i++){
                 //Create elements
-                let carouselGame = document.createElement('article'),
-                indicator = document.createElement('li');
+                let carouselGame = document.createElement('article');
 
                 //Add attributes to elements
                 carouselGame.classList.add('carousel-item','carouselgame', 'text-center');
-
-                indicator.setAttribute('data-target', '#carouselExampleIndicators');
-                indicator.setAttribute('data-slide-to', i+1)
 
                 //Add Inner Html
                 carouselGame.innerHTML = `
@@ -111,30 +125,25 @@ class Main{
                 </div>`;
 
                 //Append to HTML
-                indicatorList.appendChild(indicator);
-                carousel.appendChild(carouselGame);
+                carousel.append(carouselGame);
             }
         }
         //IF GAMES ARE ALREADY IN CAROUSEL
         else{
             //Clear all games so no duplicates
-            let games = document.querySelectorAll('.carouselgame'),
-            allIndicators = document.querySelectorAll('.indicator');
+            let games = document.querySelectorAll('.carouselgame');
             for(let i=0; i < games.length; i++){
                 games[i].remove();
-                allIndicators[i].remove();
             }
+
             //Add games back in
             for(let i=0; i < gamesArray.length; i++){
 
                 //Create elements
-                let carouselGame = document.createElement('article'),indicator = document.createElement('li');
+                let carouselGame = document.createElement('article');
 
                 //Add Atributes
-                carouselGame.classList.add('carousel-item','carouselgame', 'text-center');
-
-                indicator.setAttribute('data-target', '#carouselExampleIndicators');
-                indicator.setAttribute('data-slide-to', i+1)
+                carouselGame.classList.add('carousel-item', 'carouselgame', 'text-center');
 
                 //Add inner HTML
                 carouselGame.innerHTML = `
@@ -150,11 +159,9 @@ class Main{
                 </div>`;
 
                 //Append to HTML
-                indicatorList.appendChild(indicator);
-                carousel.appendChild(carouselGame);
+                carousel.append(carouselGame);
             }
         }
-
     }
 
 // ====Validate Filter================================================
@@ -179,8 +186,10 @@ class Main{
         inputs[0].classList.add('error');
 
         //delete to remove any duplicates
-        playerError.remove();
-        timeError.remove();
+        const removeThis = document.querySelectorAll('.textError');
+        for(let i=0; i < removeThis.length; i++){
+            removeThis[i].remove()
+        }
         inputs[1].classList.remove('error');
         inputs[0].classList.remove('error');
 

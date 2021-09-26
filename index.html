@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="An app that makes your tabletop game nights easier and allows you to keep track of your collection">
     <title>BoardDebut</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/colors.css">
@@ -28,60 +28,12 @@
 <!-- ================================================ -->
     <main class="container p-4 row col-lg-6">
 
-        <!-- FORM EXAMPLE -->
-        <!-- <form class="container col-sm-4 col-md-2 col-lg-4 generateForm">
-            <h6 class="text-right">*required</h6>
-            <label for="img" class="form-label">Select image:</label>
-            <input type="file" class="mb-3" id="img" name="img" accept="image/*">
-            <label for="titleInput" class="form-label">*Title</label>
-            <input type="text" class="form-control mb-3" id="titleInput">
-            <label for="playersInput" class="form-label">*Max Amount of Players</label>
-            <input type="number" class="form-control mb-3" id="playersInput">
-            <label for="timeInput" class="form-label">*Time Needed(in minutes)</label>
-            <input type="number" class="form-control mb-3" placeholder="(ex: 120)" id="timeInput">
-            <label for="descInput" class="form-label">Description</label>
-            <textarea class="form-control mb-3" id="descInput"></textarea>
-            <button type="button" class="btn submitBtn btn-primary mb-3 mr-3">Submit</button>
-            <button type="button" class="btn cancelBtn btn-primary mb-3">Cancel</button>
-        </form> -->
-
-
         <section id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="1" class="indicator"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="2" class="indicator"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="3" class="indicator"></li>
-            </ol>
             <div class="carousel-inner">
                 <article class="carousel-item active carouselFiller text-center">
                     <div class="card-body">
                         <h2 class="card-title">My Games</h2>
                         <p class="card-tex">This Carousel will show your games that you own and act as your random game picker for game night.</p>
-                    </div>
-                </article>
-                <article class="carousel-item  carouselgame text-center">
-                    <img class="d-block w-100 card-img-top" src="images/Ascension.jpg" alt="Ascension Game Box Art">
-                    <div class="card-body">
-                        <h2 class="card-title">Ascension</h2>
-                        <h3 class="card-subtitle">Time: <span>30</span> Players: <span>4</span></h3>
-                        <p class="card-tex">Ascension is a deck-building game in which players spend Runes to acquire more powerful cards for their deck.</p>
-                    </div>
-                </article>
-                <article class="carousel-item carouselgame text-center">
-                    <img class="d-block w-100 card-img-top" src="images/Catan.jpg" alt="Catan Game Box Art">
-                    <div class="card-body">
-                        <h2 class="card-title">Catan</h2>
-                        <h3 class="card-subtitle">Time: <span>120</span> Players: <span>4</span></h3>
-                        <p class="card-tex">Players try to be the dominant force on the island of Catan by building settlements, cities, and roads. On each turn dice are rolled to determine what resources the island produces.</p>
-                    </div>
-                </article>
-                <article class="carousel-item carouselgame text-center">
-                    <img class="d-block w-100 card-img-top" src="images/Dice_City.jpg" alt="Dice City Game Box Art">
-                    <div class="card-body">
-                        <h2 class="card-title">Dice City</h2>
-                        <h3 class="card-subtitle">Time: <span>60</span> Players: <span>4</span></h3>
-                        <p class="card-tex">Dice City is a "dice-crafting" game in which the locations in your city act as the changing faces of your dice each turn. Use tactics and strategy to press your claim!</p>
                     </div>
                 </article>
             </div>
